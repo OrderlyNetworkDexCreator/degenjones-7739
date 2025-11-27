@@ -1,6 +1,7 @@
 window.__RUNTIME_CONFIG__ = {
   "VITE_ORDERLY_BROKER_ID": "demo",
   "VITE_ORDERLY_BROKER_NAME": "Degen Jones",
+  "VITE_BROKER_EOA_ADDRESS": "0x6df68aea7c354bde26eee72730352264cda20409",
   "VITE_DISABLE_MAINNET": "false",
   "VITE_DISABLE_TESTNET": "true",
   "VITE_ORDERLY_MAINNET_CHAINS": "1,42161,8453,900900900,56",
@@ -19,6 +20,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_HAS_SECONDARY_LOGO": "true",
   "VITE_ENABLED_MENUS": "Trading,Leaderboard,Rewards,Portfolio,Markets",
   "VITE_CUSTOM_MENUS": "",
+  "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "false",
   "VITE_ENABLE_CAMPAIGNS": "false",
   "VITE_TELEGRAM_URL": "https://t.me/degenjones",
   "VITE_DISCORD_URL": "",
@@ -34,5 +36,6 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_AVAILABLE_LANGUAGES": "en,zh,ja,es,ko,vi,de,fr,ru,id,tr,it,pt,uk,pl,nl",
   "VITE_USE_CUSTOM_PNL_POSTERS": "true",
   "VITE_CUSTOM_PNL_POSTER_COUNT": "2",
-  "VITE_TRADING_VIEW_COLOR_CONFIG": "{\"upColor\":\"#00ff66\",\"downColor\":\"#f5428a\",\"pnlUpColor\":\"#00ff66\",\"pnlDownColor\":\"#f5428a\",\"chartBG\":\"#0A0A0A\"}"
+  "VITE_TRADING_VIEW_COLOR_CONFIG": "{\"upColor\":\"#00ff66\",\"downColor\":\"#f5428a\",\"pnlUpColor\":\"#00ff66\",\"pnlDownColor\":\"#f5428a\",\"chartBG\":\"#0A0A0A\"}",
+  "VITE_ANALYTICS_SCRIPT": ""
 };
