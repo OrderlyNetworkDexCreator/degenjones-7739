@@ -18,7 +18,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_APP_DESCRIPTION": "Degen Jones is a decentralized perpetuals exchange offering fast, high-leverage crypto trading with deep liquidity and low fees — no KYC, no VPN required. Trade directly from your wallet with full on-chain transparency and zero barriers.",
   "VITE_HAS_PRIMARY_LOGO": "true",
   "VITE_HAS_SECONDARY_LOGO": "true",
-  "VITE_ENABLED_MENUS": "Trading,Leaderboard,Rewards,Portfolio,Markets",
+  "VITE_ENABLED_MENUS": "Trading,Leaderboard,Rewards,Portfolio,Markets,Swap",
   "VITE_CUSTOM_MENUS": "",
   "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "false",
   "VITE_ENABLE_CAMPAIGNS": "false",
