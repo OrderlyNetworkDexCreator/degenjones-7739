@@ -85,47 +85,25 @@ html, body {
 }
 
 /* ============================================
-   HIDE "ORDERLY" BRANDING FROM TRADINGVIEW CHART
+   HIDE "ORDERLY" FROM TRADINGVIEW CHART
    ============================================ */
 
-/* Hide exchange name in chart legend title */
-.chart-markup-table .pane-legend-title-bar .pane-legend-title > span:last-child,
-.pane-legend-item-value-container span:last-of-type,
-.apply-overflow-tooltip.item-_gbIhXor:last-child {
+/* EXACT FIX: Hide the exchange title element */
+.exchangeTitle-l31H9iuA {
   display: none !important;
 }
 
-/* Hide the "· Orderly" separator and text */
-.pane-legend-title > span:nth-last-child(1),
-.pane-legend-title > span:nth-last-child(2) {
+/* Backup: Target by partial class name (in case hash changes) */
+[class*="exchangeTitle"] {
   display: none !important;
 }
 
-/* Target TradingView legend source items */
-[data-name="legend-source-item"] .apply-overflow-tooltip:nth-child(n+3),
-.legendSeriesItem .apply-overflow-tooltip:last-child,
-.legend-title-bar .exchange-name {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Hide exchange identifier in symbol header */
-.tv-symbol-header__exchange,
-.tv-category-header__exchange-title,
-.chart-widget .legend .exchange {
+/* Also hide any element with withDot that contains exchange */
+.titleWrapper-l31H9iuA.exchangeTitle-l31H9iuA {
   display: none !important;
 }
 
-/* Clean approach: hide 3rd+ items in legend title (keeps symbol & timeframe) */
-.pane-legend-title span.apply-overflow-tooltip:nth-of-type(n+3) {
+/* Future-proof: attribute selector for exchange title */
+div[class*="exchangeTitle"][class*="withDot"] {
   display: none !important;
-}
-
-/* Fallback: target by content pattern */
-[class*="legend"] [class*="title"] > span:last-child:not(:first-child):not(:nth-child(2)) {
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  position: absolute !important;
 }
