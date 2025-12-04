@@ -1,4 +1,4 @@
- :root {
+:root {
   --oui-font-family: 'Nunito', sans-serif;
   --oui-font-size-base: 13.5px;
 
@@ -85,35 +85,40 @@ html, body {
 }
 
 /* ============================================
-   HIDE "ORDERLY" FROM TRADINGVIEW CHART
+   HIDE "ORDERLY" - NUCLEAR OPTION
    ============================================ */
 
-/* Target the parent wrapper (hides both the dot and "Orderly") */
-div.titleWrapper-l31H9iuA.exchangeTitle-l31H9iuA.apply-overflow-tooltip.withDot-l31H9iuA {
+/* Every possible selector with maximum specificity */
+html body div[class*="exchangeTitle"],
+html body div[class*="exchangeTitle-"],
+html body [data-name="legend-source-exchange"],
+html body .chart-markup-table [class*="exchangeTitle"],
+html body .chart-widget [class*="exchangeTitle"],
+html body div.titleWrapper-l31H9iuA.exchangeTitle-l31H9iuA,
+html body div[class*="titleWrapper"][class*="exchangeTitle"],
+div.exchangeTitle-l31H9iuA,
+[class*="exchangeTitle"][class*="withDot"],
+.titlesWrapper-l31H9iuA > [class*="exchangeTitle"] {
   display: none !important;
   visibility: hidden !important;
+  opacity: 0 !important;
   width: 0 !important;
   height: 0 !important;
+  max-width: 0 !important;
+  max-height: 0 !important;
   overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  pointer-events: none !important;
 }
 
-/* Target by attribute selector (future-proof if hash changes) */
-div[class*="exchangeTitle"][class*="withDot"] {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Target the inner div with "Orderly" text directly */
-div[class*="exchangeTitle"] > div[class*="title-"] {
+/* Also target the inner title div */
+[class*="exchangeTitle"] > [class*="title-"] {
   display: none !important;
 }
 
-/* High specificity selector matching your exact path */
-.chart-markup-table .titlesWrapper-l31H9iuA > div.exchangeTitle-l31H9iuA {
-  display: none !important;
-}
-
-/* Ultra-specific: exact class combo */
-.titlesWrapper-l31H9iuA > .titleWrapper-l31H9iuA.exchangeTitle-l31H9iuA {
+/* Replicate TradingView's blockHidden class exactly */
+.blockHidden-e6PF69Df,
+[class*="blockHidden"] {
   display: none !important;
 }
